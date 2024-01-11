@@ -1,0 +1,10 @@
+--- binutils.orig/binutils/objcopy.c	2019-08-05 13:14:52.037496277 +0100
++++ binutils-2.32/binutils/objcopy.c	2019-08-05 13:14:58.491455624 +0100
+@@ -2225,7 +2225,6 @@ merge_gnu_build_notes (bfd * abfd, asect
+ 		  && back->note.namesz == pnote->note.namesz
+ 		  && memcmp (back->note.namedata, pnote->note.namedata, pnote->note.namesz) == 0)
+ 		{
+- fprintf (stderr, "DUP FUNXC\n");
+ 		  duplicate_found = TRUE;
+ 		  pnote->note.type = 0;
+ 		  break;
